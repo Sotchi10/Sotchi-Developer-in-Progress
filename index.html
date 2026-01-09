@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://fonts.cdnfonts.com/css/switzer" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        /* Font */
+        * {
+            font-family: 'Switzer', sans-serif;
+        }
+
+        .text-darkGrey {
+            color: #4c4c4c;
+        }
+
+        .text-darkGrey2 {
+            color: #8a8a8a;
+        }
+
+        .bg-darkMode {
+            background-color: #141414;
+        }
+
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+
+            scrollbar-width: none;
+
+        }
+
+
+        @keyframes autoScroll {
+            0% {
+                translate: 0;
+            }
+
+            100% {
+                translate: -50%;
+            }
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                scale: 0.5;
+            }
+
+            to {
+                opacity: 1;
+                scale: 1;
+            }
+        }
+
+        @keyframes left {
+            from {
+                scale: 0.2;
+                transform: translateX(-500px);
+            }
+
+            to {
+                scale: 1;
+                transform: translateX(0px);
+
+            }
+        }
+
+        @keyframes right {
+            from {
+                scale: 0.2;
+                transform: translateX(500px);
+            }
+
+            to {
+                scale: 1;
+                transform: translateX(0px);
+
+            }
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+       
+
+        .animate-fadeIn {
+            animation: fadeIn 3s ease-out linear;
+           
+        }
+        .animate-left {
+            animation: left 3s linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 42%;
+        }
+
+        .animate-right {
+            animation: right 3s linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 42%;
+        }
+
+
+        .animate-show {
+            animation: appear linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 28%;
+        }
+
+        .animate-autoScroll {
+            display: flex;
+            animation: autoScroll 7s infinite linear;
+        }
+    </style>
+</head>
+
+<body class="bg-[#e9ecef] ">
+    <!-- Navigation Bar -->
+    <nav
+        class="w-full border-b border-gray-300 h-[60px] flex flex-row justify-between items-center px-10 fixed z-1000 bg-[#e9ecef]">
+        <a href="#" class="font-bold text-[30px]">SOTCHI.</a>
+        <ul class="flex justify-center items-center gap-10 font-medium">
+            <li class="hover:underline">
+                <a href="index.html">Home</a>
+            </li>
+            <li class="hover:underline">
+                <a href="#aboutMe">About Me</a>
+            </li>
+            <li class="hover:underline">
+                <a href="#projects">Projects</a>
+            </li>
+            <li class="hover:underline">
+                <a href="#skills">Skills</a>
+            </li>
+        </ul>
+        <a href="#" class="cursor-pointer font-medium">
+            My Contact
+        </a>
+    </nav>
+    <main class="w-full z-999">
+        <!-- Hero Section -->
+        <section class="w-full h-[100vh] pt-[60px] flex flex-col justify-between px-20">
+            <!-- Name -->
+            <div class="flex flex-col justify-center items-start pt-30">
+                <h1 class="font-semibold text-[200px] leading-30">Sotchi.</h1>
+            </div>
+            <!-- Description -->
+            <div class="w-full mt-10 flex flex-row ">
+                <div class="w-[65%] ">
+                    <h4 class="font-medium text-[20px] text-darkGrey mb-5"><span>This is a space</span> where I document
+                        my
+                        journey in software engineering, showcase the I’ve built, and share the skills I continue to
+                        develop.
+                    </h4>
+                    <a href="#contact"
+                        class="border-1 border-gray-600 rounded-[30px] px-5 py-2 text-center hover:bg-black hover:text-white transition-all duration-300 ease-out">Get
+                        in touch ↗</a>
+                </div>
+                <div class="w-[35%] flex flex-col justify-center items-center">
+
+                </div>
+            </div>
+            <!-- Logos -->
+            <div class="w-full mt-10 flex flex-row justify-center items-center">
+                <div class="font-semibold text-[50px] tracking-[.180em]">
+                    <h4>An Aspiring Full-Stack Developer - Sotchi</h4>
+                </div>
+            </div>
+            <!-- Down -->
+            <div class="w-full flex flex-row justify-between mt-10 mb-10">
+                <div class="flex flex-col text-[18px]">
+                    <h4 class="text-darkGrey"><em>(Email)</em></h4>
+                    <a href="#">sovanpisothyan@gmail.com</a>
+                </div>
+                <div class="flex flex-col text-[18px]">
+                    <h4 class="text-darkGrey"><em>(Scroll down)</em></h4>
+                    <p>To explore more</p>
+                </div>
+                <div class="flex flex-col text-[18px]">
+                    <h4 class="text-darkGrey"><em>(Socials)</em></h4>
+                    <div class="flex flex-row gap-6">
+                        <a href="#">YT</a>
+                        <a href="#">TT</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About Me -->
+        <section id="aboutMe"
+            class="w-full flex flex-col justify-center justify-between border-t border-gray-400 px-20 py-15">
+            <div class="w-full " >
+                <p class="text-darkGrey">[About Me]</p>
+                <h1 class="text-[50px] font-medium leading-13">A developer in progress, focused on <br> <span
+                        class="text-darkGrey">clean and useful solutions.</span></h1>
+            </div>
+
+            <div class="w- flex flex-row gap-20 mt-15 ">
+                <div class="w-[30%] flex justify-center items-center">
+                    <h4 class="text-[25px] font-medium text-darkGrey"><em>"Keep improving everyday."</em></h4>
+                </div>
+                <div class="w-[70%] ">
+                    <h4 class="text-[16px]">Sovanpisoth Yan (Sotchi) is an aspiring full-stack developer from Phnom
+                        Penh, Cambodia, currently majoring in Software Engineering. Passionate about building modern web
+                        applications, he focuses on frontend development while continuously learning new technologies
+                        and improving his coding skills. This portfolio showcases his projects, experiments, and growth
+                        as a developer.</h4>
+
+                </div>
+            </div>
+
+            <div class="w- flex flex-row gap-20 mt-15">
+                <div class="w-[70%]">
+                    <h4 class="text-[16px] ">I started programming in 2025, with C as my first language. My first
+                        project, completed during my first year of university, was a store management system built
+                        entirely in C. Since then, I have become increasingly excited about learning new programming
+                        languages and expanding my knowledge in web development, software engineering, and application
+                        development. I am passionate about creating systems and applications that can help solve
+                        real-world problems.</h4>
+                    <a href="#" class="font-medium underline underline-offset-1">Read my Journal </a>
+                </div>
+                <div class="w-[30%] grid grid-cols-3 animate-show">
+                    <div class="w-full h-[60px] flex flex-col justify-center">
+                        <h6 class="text-darkGrey">Lorem</h6>
+                        <h4 class="text-[30px]">Null</h4>
+                    </div>
+                    <div class="w-full h-[60px] flex flex-col justify-center">
+                        <h6 class="text-darkGrey">Projects</h6>
+                        <h4 class="text-[30px]">3</h4>
+                    </div>
+                    <div class="w-full h-[60px] flex flex-col justify-center">
+                        <h6 class="text-darkGrey">Skills</h6>
+                        <h4 class="text-[30px]">4</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Principles -->
+        <section id="principles" class="w-full flex flex-col justify-center justify-between mt-10 px-20 animate-show">
+            <h1 class="text-darkGrey font-medium">[4 Principles]</h1>
+            <div class="w-[20%] border-b border-gray-400 mt-10">
+
+            </div>
+            <div class="grid grid-cols-4 gap-6">
+                <div class="w-full h-[200px] flex items-center">
+                    <div>
+                        <h4 class="font-semibold text-[20px]">/ 01.</h4>
+                        <h2 class="text-[35px] font-bold">DISCOVER</h2>
+                        <h3 class="text-[18px] font-medium text-darkGrey">Focus on learning core concepts and
+                            understanding how things work.</h3>
+                    </div>
+                </div>
+                <div class="w-full h-[200px] flex items-center">
+                    <div>
+                        <h4 class="font-semibold text-[20px]">/ 02.</h4>
+                        <h2 class="text-[35px] font-bold">DESIGN</h2>
+                        <h3 class="text-[18px] font-medium text-darkGrey">Plan simple, clear structures before building.
+                        </h3>
+                    </div>
+                </div>
+                <div class="w-full h-[200px] flex items-center">
+                    <div>
+                        <h4 class="font-semibold text-[20px]">/ 03.</h4>
+                        <h2 class="text-[35px] font-bold">DEVELOP</h2>
+                        <h3 class="text-[18px] font-medium text-darkGrey">Implement ideas into functional and reliable
+                            code.</h3>
+                    </div>
+                </div>
+                <div class="w-full h-[200px] flex items-center">
+                    <div>
+                        <h4 class="font-semibold text-[20px]">/ 04.</h4>
+                        <h2 class="text-[35px] font-bold">DEPLOY</h2>
+                        <h3 class="text-[18px] font-medium text-darkGrey">Test, launch, and improve through real-world
+                            use.</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-[20%] border-t border-gray-400 mt-10">
+
+            </div>
+        </section>
+        <!-- Skills -->
+        <section id="skills" class="w-full mt-15 h-[100vh] px-20 animate-show">
+            <p class="text-darkGrey">[Skills]</p>
+            <h1 class="text-[50px] font-medium leading-13">Building my skills in collaboration <br> <span
+                    class="text-darkGrey">and web development</span></h1>
+            <div class="w-full flex flex-row mt-10 ">
+                <div class="w-[70%] border-1 border-gray-400 rounded-[15px] px-10 py-8">
+                    <div class="w-full flex justify-between">
+                        <h4 class="text-[30px] font-semibold">Experience</h4>
+                        <button
+                            class="cursor-pointer rounded-[30px] hover:text-darkGrey flex justify-center items-center gap-2">
+                            <img src="assests/icons/download.png" alt="download" class="w-4 h-4">
+                            Download CV</button>
+                    </div>
+                    <!-- Experience Lists -->
+                    <div class="w-full flex flex-col mt-3 ">
+                        <div class="w-full py-4 flex justify-between items-center border-b border-gray-400">
+                            <h4 class="font-semibold">No.</h4>
+                            <h4 class="font-semibold">Title</h4>
+                            <h4 class="font-semibold">Date</h4>
+                        </div>
+                        <div class="w-full overflow-y-auto scrollbar-hide h-[400px]">
+
+                            <details class="w-full">
+                                <summary
+                                    class="w-full py-4 flex justify-between items-center cursor-pointer hover:bg-gray-300">
+                                    <h4>01</h4>
+                                    <h4>CADT Freshman Coding Championship</h4>
+                                    <h4>July 12, 2025</h4>
+                                </summary>
+                                <p class="text-darkGrey"><em>On July 12, 2025, I participated in a school coding competition and was honored with the title of “Rising Star.” The event lasted an entire day and included a variety of challenging activities that tested my skills in problem-solving and teamwork. It was my first coding competition, and it provided an excellent opportunity to meet and collaborate with talented peers, communicate effectively, and reflect on my technical abilities. The experience not only strengthened my coding skills but also taught me the value of collaboration and creative thinking under pressure.</em></p>
+                            </details>
+                            <details class="w-full">
+                                <summary
+                                    class="w-full py-4 flex justify-between items-center cursor-pointer hover:bg-gray-300">
+                                    <h4>02</h4>
+                                    <h4>Sangkrantra Volunteer</h4>
+                                    <h4>March 13 - April 05, 2025</h4>
+                                </summary>
+                                <p class="text-darkGrey"><em></em></p>
+                            </details>
+                            <details class="w-full">
+                                <summary
+                                    class="w-full py-4 flex justify-between items-center cursor-pointer hover:bg-gray-300">
+                                    <h4>03</h4>
+                                    <h4>IYF World Camp</h4>
+                                    <h4>19 - 21 September, 2022</h4>
+                                </summary>
+                                <p class="text-darkGrey"><em></em></p>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-[30%] px-5 rounded-[12px]">
+                    <div class="w-full border-1 border-gray-400 px-7 gap-2 py-6 rounded-[20px]">
+                        <h4 class="text-[28px] font-semibold text-center">Tech Stack</h4>
+                        <div class="w-full flex flex-col gap-3 overflow-y-auto h-[260px] scrollbar-hide mt-2">
+                            <!-- 1 -->
+                            <div class="w-full flex flex-row justify-start items-center cursor-pointer gap-3">
+                                <img src="assests/icons/css.svg" alt="css" class="w-15 h-15">
+                                <div class="flex flex-col">
+                                    <h4 class="font-medium">HTML</h4>
+                                    <p class="text-darkGrey">Mockup Language</p>
+                                </div>
+                            </div>
+                            <!-- 2 -->
+                            <div class="w-full flex flex-row justify-start items-center cursor-pointer gap-3">
+                                <img src="assests/icons/html.svg" alt="css" class="w-15 h-15">
+                                <div class="flex flex-col">
+                                    <h4 class="font-medium">CSS</h4>
+                                    <p class="text-darkGrey">Mockup Language</p>
+                                </div>
+                            </div>
+                            <!-- 3 -->
+                            <div class="w-full flex flex-row justify-start items-center cursor-pointer gap-3">
+                                <img src="assests/icons/tailwind.png" alt="css" class="w-15 h-15">
+                                <div class="flex flex-col">
+                                    <h4 class="font-medium">Tailwind CSS</h4>
+                                    <p class="text-darkGrey">Framework</p>
+                                </div>
+                            </div>
+                            <!-- 4 -->
+                            <div class="w-full flex flex-row justify-start items-center cursor-pointer gap-3">
+                                <img src="assests/icons/figma.png" alt="css" class="w-15 h-15">
+                                <div class="flex flex-col">
+                                    <h4 class="font-medium">Figma</h4>
+                                    <p class="text-darkGrey">Designing Tool</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Projects -->
+        <section id="projects" class="w-full flex flex-col border-t border-gray-400 px-20">
+            <div class="mt-10 animate-show">
+                <h1 class="text-[50px] font-medium text-start">Projects</h1>
+                <h4 class="text-[20px] text-start text-darkGrey">Work I’ve built through learning.</h4>
+            </div>
+            <div class="w-full grid grid-cols-2 gap-2 mt-10">
+                <div
+                    class="w-[98%] h-auto py-4 px-2 bg-[#e9ecef] animate-left rounded-[18px] hover:bg-black hover:text-white transition-all duration-300 ease cursor-pointer group">
+                    <div class="overflow-hidden rounded-[15px]">
+                        <img src="assests/image/Portfolio.png" alt="portfolio"
+                            class="w-full h-[350px] object-cover transition-transform duration-500 ease-in-out group-hover:scale-104">
+                    </div>
+                    <div class="flex flex-row w-full justify-between mt-2">
+                        <div class="flex flex-col">
+                            <h4 class="font-semibold">Sotchi.</h4>
+                            <h4>Portfolio</h4>
+                        </div>
+                        <h4>2026</h4>
+                    </div>
+                </div>
+
+                <div
+                    class="w-[98%] h-auto py-4 px-2 bg-[#e9ecef] animate-right rounded-[18px] hover:bg-black hover:text-white transition-all duration-300 ease cursor-pointer group">
+                    <div class="overflow-hidden rounded-[15px]">
+                        <img src="assests/image/Rean2Learn.png" alt="portfolio"
+                            class="w-full h-[350px] object-cover transition-transform duration-500 ease-in-out group-hover:scale-104">
+                    </div>
+                    <div class="flex flex-row w-full justify-between mt-2">
+                        <div class="flex flex-col">
+                            <h4 class="font-semibold">Rean2Learn</h4>
+                            <h4>Productivity management system</h4>
+                        </div>
+                        <h4>2025</h4>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <div class="flex flex-col mt-10 gap-5 animate-show">
+                <!-- Project1 -->
+                <div class="w-full flex flex-row justify-between border-b border-gray-400 py-10 animate-show">
+                    <!-- 1 -->
+                    <div class="w-[25%] flex flex-col gap-2">
+                        <h6 class="text-darkGrey">[01]</h6>
+                        <h4 class="text-[30px] font-semibold">Portfolio</h4>
+                    </div>
+                    <!-- 2 -->
+                    <div class="w-[60%] flex flex-col gap-2">
+                        <h4 class="text-[30px] font-semibold">Minimalist portfolio design</h4>
+                        <h6 class="text-darkGrey">2026</h6>
+                    </div>
+                    <!-- 3 -->
+                    <div class="w-[15%] flex flex-col gap-2 justify-center items-center">
+                        <a href="#"
+                            class="bg-black text-white px-5 py-1 rounded-[30px] transition-all duration-300 ease-out hover:bg-[#e9ecef] hover:border-1 hover:text-black" target="_blank">
+                            View Project ↗
+                        </a>
+                    </div>
+                </div>
+                <!-- Project2 -->
+                <div class="w-full flex flex-row justify-between border-b border-gray-400 py-10 animate-show">
+                    <!-- 1 -->
+                    <div class="w-[25%] flex flex-col gap-2">
+                        <h6 class="text-darkGrey">[02]</h6>
+                        <h4 class="text-[30px] font-semibold">Rean2Learn</h4>
+                    </div>
+                    <!-- 2 -->
+                    <div class="w-[60%] flex flex-col gap-2">
+                        <h4 class="text-[30px] font-semibold">Student Workflow and Productivity System</h4>
+                        <h6 class="text-darkGrey">2025</h6>
+                    </div>
+                    <!-- 3 -->
+                    <div class="w-[15%] flex flex-col gap-2 justify-center items-center">
+                        <a href="https://github.com/Sotchi10/Rean2Learn-Web-Based-Application.git"
+                            class="bg-black text-white px-5 py-1 rounded-[30px] transition-all duration-300 ease-out hover:bg-[#e9ecef] hover:border-1 hover:text-black" target="_blank">
+                            View Project ↗
+                        </a>
+                    </div>
+                </div>
+                <!-- Project3 -->
+                <div class="w-full flex flex-row justify-between border-b border-gray-400 py-10 animate-show">
+                    <!-- 1 -->
+                    <div class="w-[25%] flex flex-col gap-2">
+                        <h6 class="text-darkGrey">[03]</h6>
+                        <h4 class="text-[30px] font-semibold">Store System</h4>
+                    </div>
+                    <!-- 2 -->
+                    <div class="w-[60%] flex flex-col gap-2">
+                        <h4 class="text-[30px] font-semibold">An interactive system between buyers and sellers</h4>
+                        <h6 class="text-darkGrey">2025</h6>
+                    </div>
+                    <!-- 3 -->
+                    <div class="w-[15%] flex flex-col gap-2 justify-center items-center">
+                        <a href="#"
+                            class="bg-black text-white px-5 py-1 rounded-[30px] transition-all duration-300 ease-out hover:bg-[#e9ecef] hover:border-1 hover:text-black" target="_blank">
+                            View Project ↗
+                        </a>
+                    </div>
+                </div>
+                
+            
+            </div>
+        </section>
+        <!-- Contact -->
+        <section id="contact" class="w-full flex flex-row mt-10 px-20 animate-show">
+            <div class="w-[65%]">
+                <div class="mt-20">
+                    <p class="text-darkGrey">[Contact]</p>
+                    <h4 class="text-[45px] font-semibold">I'd love to hear your advises <br> <span class="text-darkGrey"> and suggestions.</span></h4>
+                </div>
+                <a href="#" class="text-[22px]">sovanpisothyan@gmail.com</a>
+            </div>
+            <div class="w-[30%] px-8 py-20">
+                <div>
+                    <h2 class="text-[40px] font-medium leading-10">Let's get in <br> touch! </h2>
+                    <p class="text-darkGrey">lorem moklm nurin apk</p>
+                </div>
+                <form action="" class="w-full flex flex-col gap-4 mt-8">
+                    <label class="w-full">
+                        <input type="text" class="w-full py-2 border-b border-gray-600" placeholder="Name" required>
+                    </label>
+                    <label class="w-full">
+                        <input type="email" class="w-full py-2 border-b border-gray-600" placeholder="Email" required>
+                    </label>
+                    <label class="w-full">
+                        <textarea class="w-full py-2 border-b border-gray-600 min-h-[70px] max-h-[100px]" required>
+
+                        </textarea>
+                    </label>
+                    <button
+                        class="bg-black text-white py-2 rounded-[15px] cursor-pointer transition-all duration-300 ease-out hover:bg-[#e9ecef] hover:border-1 hover:text-black"
+                        type="submit">Send a
+                        message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer class="w-full px-20 mt-10">
+        <div class="w-[70%] grid grid-cols-4">
+            <div class="w-full flex flex-col gap-4">
+                <h4>Pages</h4>
+                <ul class="text-darkGrey flex flex-col gap-4">
+                    <li class="hover:underline">
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li class="hover:underline">
+                        <a href="#aboutMe">About Me</a>
+                    </li>
+                    <li class="hover:underline">
+                        <a href="#projects">Projects</a>
+                    </li>
+                    <li class="hover:underline">
+                        <a href="#skills">Skills</a>
+                    </li>
+                    <li class="hover:underline">
+                        <a href="#skills">Contact</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="w-full flex flex-col gap-4">
+                <h4>Socials</h4>
+                <ul class="text-darkGrey flex flex-col gap-4">
+                    <li class="hover:underline">
+                        <a href="https://youtube.com/@sotchi10?si=-eIw1Vk150sbuUmT" target="_blank">Youtube</a>
+                    </li>
+                    <li class="hover:underline">
+                        <a href="#" target="_blank">Tiktok</a>
+                    </li>
+                    <li class="hover:underline">
+                        <a href="https://www.linkedin.com/in/sovanpisoth-yan-679a233a2/" target="_blank">LinkedIn</a>
+                    </li>
+                    <li class="hover:underline">
+                        <a href="https://github.com/Sotchi10" target="_blank">Github</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="w-full flex flex-col gap-4">
+                <h4>Inspiration</h4>
+                <ul class="text-darkGrey flex flex-col gap-4">
+                    <li class="hover:underline">
+                        <a href="https://www.framer.com/marketplace/" target="_blank">Framer</a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="w-full flex flex-col gap-4">
+                <h4>Location</h4>
+                <ul class="text-darkGrey flex flex-col gap-4">
+                    <li class="hover:underline">
+                        <a href="https://en.wikipedia.org/wiki/Phnom_Penh" target="_blank">Phnom Penh, Cambodia</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="w-[30%]">
+
+        </div>
+        <div class="w-full border-t border-gray-600 mt-10 mb-20 py-2">
+            <h4>© 2026 Sotchi. All rights reserved.</h4>
+        </div>
+    </footer>
+</body>
+
+</html>
